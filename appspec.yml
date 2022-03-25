@@ -1,0 +1,13 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /opt/sites/
+  ApplicationStart:
+    - command: /bin/systemctl restart nginx
+      timeout: 300
+      runas: root
+  ApplicationStop:
+    - command: /bin/systemctl stop nginx
+      timeout: 300
+      runas: root
