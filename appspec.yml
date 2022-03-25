@@ -4,10 +4,10 @@ files:
   - source: /
     destination: /opt/sites/
   ApplicationStart:
-    - command: /bin/systemctl restart nginx
+     command: /bin/systemctl restart nginx
       timeout: 300
       runas: root
   ApplicationStop:
-    - command: /bin/systemctl stop nginx
+     command: /bin/systemctl stop nginx
       timeout: 300
       runas: root
